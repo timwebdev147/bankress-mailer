@@ -67,7 +67,7 @@ $port = 587;
 $bodyText =  "Hey Bankress \r\n".$message;
 
 // The HTML-formatted body of the email
-$bodyHtml = "<h1>Message from client (".$fullname.")</h1>
+$bodyHtml = "<h1 style='color: black;'>Message from client (".$fullname.")</h1>
 <p>".$message." <br/>
 client's email: ".$email." <br/>
 client's phone number: ".$phone."
