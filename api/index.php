@@ -3,7 +3,6 @@
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: *");
 header("Location: http://localhost:8080/contact/thank_you");
-exit();
 
 // Import PHPMailer classes into the global namespace
 // These must be at the top of your script, not inside a function
@@ -49,31 +48,31 @@ $port = 587;
     return $data;
 };
     $fullname = $email = $phone = $message = 'heyy';
-
+    
     if (isset($_POST['submit']) ) {
-   # code...
-   $fullname = $_POST['fullname'];
-   $email = $_POST['email'];
+        # code...
+        $fullname = $_POST['fullname'];
+        $email = $_POST['email'];
    $phone = $_POST['number'];
    $message = $_POST['message'];
+   
 
 
-
-    
+   
    
    // The subject line of the email
-$subject = "Hello Bankress a Client (".$fullname.") sent a message from your website";
-
-// The plain-text body of the email
+   $subject = "Hello Bankress a Client (".$fullname.") sent a message from your website";
+   
+   // The plain-text body of the email
 $bodyText =  "Hey Bankress \r\n".$message;
 
 // The HTML-formatted body of the email
 $bodyHtml = "<h1>Message from client (".$fullname.")</h1>
-    <p>".$message." <br/>
-    
-    client's email: ".$email." <br/>
-    client's phone number: ".$phone."
-    </p>";
+<p>".$message." <br/>
+
+client's email: ".$email." <br/>
+client's phone number: ".$phone."
+</p>";
 
 $mail = new PHPMailer(true);
 
@@ -107,4 +106,5 @@ try {
 }
 }
 
+exit();
 ?>
