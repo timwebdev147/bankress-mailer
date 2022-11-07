@@ -38,15 +38,7 @@ $host = 'email-smtp.us-east-1.amazonaws.com';
 $port = 587;
 
 // if(isset($_POST['submit']))  {
-    function test_input($data)
-{
-    # code...
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
-};
-    $fullname = $email = $phone = $message = '';
+   
 
     if (isset($_POST['submit']) ) {
    # code...
@@ -55,8 +47,8 @@ $port = 587;
    $phone = $_POST['number'];
    $message = $_POST['message'];
 
-}
-   if($fullname != '' && $email != '' && $phone != '' && $message != ''){
+
+
     
    
    // The subject line of the email
