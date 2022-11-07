@@ -48,13 +48,12 @@ $port = 587;
 };
     $fullname = $email = $phone = $message = '';
 
-    if (isset($_POST['submit']) && isset($_POST['fullname']) 
-    && isset($_POST['email']) && isset($_POST['number']) && isset($_POST['comment'])) {
+    if (isset($_POST['submit']) ) {
    # code...
-   $fullname = Test_input($_POST['fullname']);
-   $email = Test_input($_POST['email']);
-   $phone = Test_input($_POST['number']);
-   $message = Test_input($_POST['message']);
+   $fullname = $_POST['fullname'];
+   $email = $_POST['email'];
+   $phone = $_POST['number'];
+   $message = $_POST['message'];
 
 }
    if($fullname != '' && $email != '' && $phone != '' && $message != ''){
