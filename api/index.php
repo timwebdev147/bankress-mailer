@@ -48,19 +48,19 @@ $port = 587;
 };
     $fullname = $email = $phone = $message = 'heyy';
 
-    // if (!isset($_POST['submit']) ) {
+    if (!isset($_POST['submit']) ) {
    # code...
-//    $fullname = $_POST['fullname'];
-//    $email = $_POST['email'];
-//    $phone = $_POST['number'];
-//    $message = $_POST['message'];
+   $fullname = $_POST['fullname'];
+   $email = $_POST['email'];
+   $phone = $_POST['number'];
+   $message = $_POST['message'];
 
 
 
     
    
    // The subject line of the email
-$subject = "Hello Bankress a Client (akinsanmi timothy) sent a message from your website";
+$subject = "Hello Bankress a Client (".$fullname.") sent a message from your website";
 
 // The plain-text body of the email
 $bodyText =  "Hey Bankress \r\n".$message;
@@ -105,6 +105,6 @@ try {
 }
 // header("Location: http://localhost:8080/contact/thank_you");
 // exit();
-// }
+}
 
 ?>
