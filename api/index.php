@@ -2,6 +2,8 @@
 
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: *");
+header("Location: http://localhost:8080/contact/thank_you");
+exit();
 
 // Import PHPMailer classes into the global namespace
 // These must be at the top of your script, not inside a function
@@ -103,8 +105,6 @@ try {
 } catch (Exception $e) {
     echo "Email not sent. {$mail->ErrorInfo}", PHP_EOL; //Catch errors from Amazon SES.
 }
-header("Location: http://localhost:8080/contact/thank_you");
-exit();
 }
 
 ?>
