@@ -15,7 +15,7 @@ require '/var/task/user/vendor/autoload.php';
 // Replace sender@example.com with your "From" address.
 // This address must be verified with Amazon SES.
 $sender = 'contact.webberman@gmail.com';
-$senderName = 'Webber Man';
+$senderName = 'Bankress Party World';
 
 // Replace recipient@example.com with a "To" address. If your account
 // is still in the sandbox, this address must be verified.
@@ -60,7 +60,7 @@ $port = 587;
     
    
    // The subject line of the email
-$subject = "Hello Bankress a Client (".$fullname.") sent a message from your website";
+$subject = "Hello Bankress a Client (akinsanmi timothy) sent a message from your website";
 
 // The plain-text body of the email
 $bodyText =  "Hey Bankress \r\n".$message;
