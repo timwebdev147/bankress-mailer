@@ -67,9 +67,9 @@ $bodyText =  "Hey Bankress \r\n".$message;
 
 // The HTML-formatted body of the email
 $bodyHtml = "<h1>Message from client (".$fullname.")</h1>
-    <p>'.$message.' \r\n
+    <p>'.$message.' <br/>
     
-    client's email: ".$email." \r\n
+    client's email: ".$email." <br/>
     client's phone number: ".$phone."
     </p>";
 
