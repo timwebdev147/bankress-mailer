@@ -15,7 +15,7 @@ require '/var/task/user/vendor/autoload.php';
 // Replace sender@example.com with your "From" address.
 // This address must be verified with Amazon SES.
 $sender = 'contact.webberman@gmail.com';
-$senderName = 'Akinsanmi Timothy';
+$senderName = 'Webber Man';
 
 // Replace recipient@example.com with a "To" address. If your account
 // is still in the sandbox, this address must be verified.
@@ -54,21 +54,25 @@ $port = 587;
    $fullname = Test_input($_POST['fullname']);
    $email = Test_input($_POST['email']);
    $phone = Test_input($_POST['number']);
-   $message = Test_input($_POST['comment']);
+   $message = Test_input($_POST['message']);
 
 }
    if($fullname != '' && $email != '' && $phone != '' && $message != ''){
     
    
    // The subject line of the email
-$subject = "Hey Webber Man you have a Client's message from ".$fullname;
+$subject = "Hello Bankress a Client (".$fullname.") sent a message from your website";
 
 // The plain-text body of the email
-$bodyText =  "Hey Webber Man\r\n".$message;
+$bodyText =  "Hey Bankress \r\n".$message;
 
 // The HTML-formatted body of the email
-$bodyHtml = '<h1>Hey Webber Man message from '.$fullname.' '.$phone. '</h1>
-    <p>'.$message.'</p>';
+$bodyHtml = "<h1>Message from client (".$fullname.")</h1>
+    <p>'.$message.' \r\n
+    
+    client's email: ".$email." \r\n
+    client's phone number: ".$phone."
+    </p>";
 
 $mail = new PHPMailer(true);
 
@@ -100,6 +104,8 @@ try {
 } catch (Exception $e) {
     echo "Email not sent. {$mail->ErrorInfo}", PHP_EOL; //Catch errors from Amazon SES.
 }
+header("Location: http://localhost:8080/contact/thank_you");
+exit();
 }
 
 ?>
