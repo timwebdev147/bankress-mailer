@@ -50,10 +50,10 @@ $port = 587;
 
     // if (!isset($_POST['submit']) ) {
    # code...
-   $fullname = $_POST['fullname'];
-   $email = $_POST['email'];
-   $phone = $_POST['number'];
-   $message = $_POST['message'];
+//    $fullname = $_POST['fullname'];
+//    $email = $_POST['email'];
+//    $phone = $_POST['number'];
+//    $message = $_POST['message'];
 
 
 
