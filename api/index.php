@@ -48,7 +48,7 @@ $port = 587;
 };
     $fullname = $email = $phone = $message = '';
 
-    if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['fullname']) 
+    if (isset($_POST['submit']) == 'POST' && isset($_POST['fullname']) 
     && isset($_POST['email']) && isset($_POST['number']) && isset($_POST['comment'])) {
    # code...
    $fullname = Test_input($_POST['fullname']);
