@@ -38,9 +38,17 @@ $host = 'email-smtp.us-east-1.amazonaws.com';
 $port = 587;
 
 // if(isset($_POST['submit']))  {
-   
+    function test_input($data)
+{
+    # code...
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+};
+    $fullname = $email = $phone = $message = 'heyy';
 
-    if (isset($_POST['submit']) ) {
+    // if (!isset($_POST['submit']) ) {
    # code...
    $fullname = $_POST['fullname'];
    $email = $_POST['email'];
@@ -97,6 +105,6 @@ try {
 }
 // header("Location: http://localhost:8080/contact/thank_you");
 // exit();
-}
+// }
 
 ?>
